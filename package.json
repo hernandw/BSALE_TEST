@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node ./src/index.js"
+    "dev": "nodemon backend/app.js",
+    "start": "node ./backend/index.js"
   },
   "keywords": [],
   "author": "Williams Hernandez",
