@@ -9,7 +9,7 @@ const customerRoutes = require("./routes/product");
 // Configuraciones
 const PORT = process.env.PORT || 5000;
 app.set("view engine", "ejs"); // motor de plantilla EJS
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../frontend/views"));
 
 //middleware
 app.use(express.json());

@@ -8,7 +8,10 @@ router.get("/", productController.home);
 //Ruta del JSON
 router.get("/product/api", productController.api);
 
-//Ruta de Resultado de Productos por ficha
-router.get("/product/:id", productController.busqueda);
+/* //Ruta de Resultado de Productos por ficha
+router.get("/product/:id", productController.busqueda); */
+
+//Ruta del buscador
+router.get('/buscador', productController.buscar)
 
 module.exports = router;
