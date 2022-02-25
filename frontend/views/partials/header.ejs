@@ -12,43 +12,24 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="/css/custom-select.css">
 
-
-
-
     <title>Tienda BSALE</title>
 </head>
 
-
 <nav class="navbar">
     <div class="container navbar-content">
-        <h1>Tienda BSALE</h1>
+        <a href="/">Tienda BSALE</a>
+        <div>
+            <form action="/buscador" method="GET" class="form-search" id="formulario">
+
+                <input type="text" name="name" placeholder="Buscar un producto" id="inputProductos">
+                <button>Buscar</button>
+
+            </form>
+        </div>
         <button class="btn-dark-mode">
             <i class="far fa-moon"></i>
             Dark Mode</button>
     </div>
 </nav>
-<header class="container filter-content my-2">
 
-
-    <form action="/buscador" method="GET" class="form-search" id="formulario">
-        
-        <input type="text" name="name" placeholder="Buscar un producto" id="inputProductos">
-        <button>Buscar</button>
-
-    </form>
-    <div class="custom-select" id="inputCategorias">
-        <select>
-            <option value="">Selecciona una categoria</option>
-            <option value="">Todos</option>
-            <option value="bebica_energetica">Bebida energetica</option>
-            <option value="pisco">pisco</option>
-            <option value="ron">ron</option>
-            <option value="snack">snack</option>
-            <option value="bebida">bebida</option>
-            <option value="cerveza">cerveza</option>
-            <option value="vodka">vodka</option>
-        </select>
-
-    </div>
 </header>
-
