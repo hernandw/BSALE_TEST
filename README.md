@@ -43,27 +43,15 @@ npm i nodemon -D
 
 Se utilizó la metodologia MVC (Modelo Vista Conytrolador)
 
-El backend se guardó en la carpeta src
+Se creó la carpeta Backend y frontend respectivamente
 
 Las vistas se hicieron con el motor de plantilla EJS.
 
 Los modelos no se realizaron porque se conectó  a la BBDD de datos proporcionada.
 
-Buscador: Se debe escribir el nombre del producto y se actualizará autompaticamente la busqueda.
+Buscador: Debe escribir una palabra para obtener una búsqueda
 
-Ficha: se refiere a los detalles de los productos
 
-```
-localhost:3000/product/id
-```
 
-Base de Datos. Se consumió con el archivo JSON que consume de la misma BBDD
-
-```
-localhost:3000/product/api
-```
-
-se puede colocar el id del producto y realizará una búsqueda
-
-Se hizo deploy en heroku shoppingbsale.herokuapp.com/
-Se actualizó en repositorio de github: https://github.com/hernandw/prueba_tecnica_bsale
+Se hizo deploy en heroku https://bsaleshopping.herokuapp.com/
+Se actualizó en repositorio de github: https://github.com/hernandw/bsale_test
