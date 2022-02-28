@@ -25,6 +25,11 @@ body.dark-mode {
   
 }
 
+.title {
+font-size: 1.5rem;
+font-weight: bold;
+}
+
 a {
   text-decoration: none;
 }
@@ -94,7 +99,11 @@ box-shadow: var(--box-shadow);
   border-radius: var(--border-radius);
 }
 
-
+.filtros {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
 
 /* CARD */
 .grid {

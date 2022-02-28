@@ -1,23 +1,29 @@
 <%- include ('partials/header') %>
 
+<!-- <main class="container grid" id="productos">
+   
+
+   </div>
+
+</main> -->
+
 <main class="container grid ">
-   <% if (data) { %>
-       <% for( let i=0; i < data.length; i++ ) { %>
-           <article class="card" id="products">
-               <img class="img-fluid" src=<%- data[i].url_image %> >
-               <div class="card-content">
-                   <h5>
-                       <%- data[i].name %>
-                   </h5>
-                   <!-- <h3>Categoria: <%- data[i].category %></h3> -->
-                   <h5>$ <%- data[i].price %></h5>
-                   <a href=product/<%- data[i].id %> >Comprar</a>
-               </div>
-           </article>
-           <% } %>
-               <% } %>
-
-</main>
-
+    <% if (data) { %>
+        <% for( let i=0; i < data.length; i++ ) { %>
+            <article class="card" id="products">
+                <img class="img-fluid" src=<%- data[i].url_image %> >
+                <div class="card-content">
+                    <h5>
+                        <%- data[i].name %>
+                    </h5>
+                    <!-- <h3>Categoria: <%- data[i].category %></h3> -->
+                    <h5>$ <%- data[i].price %></h5>
+                    <a class="btn btn-dark" href=product/<%- data[i].id %> >Comprar</a>
+                </div>
+            </article>
+            <% } %>
+                <% } %>
+ 
+ </main>
 
    <%- include ('partials/footer') %>
