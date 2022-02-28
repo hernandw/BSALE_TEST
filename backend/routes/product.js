@@ -6,6 +6,8 @@ const productController = require("../controllers/productController");
 router.get("/", productController.home);
 
 //Ruta del buscador
-router.get('/buscador', productController.buscar)
+router.get('/buscador', productController.buscar);
+
+router.get('/product/:id', productController.productDetail);
 
 module.exports = router;

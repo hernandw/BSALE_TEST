@@ -1,0 +1,45 @@
+<%- include ('partials/header') %>
+
+<main class="container">
+    <div class="content">
+        <div class="back">
+            <a href="/">Volver a la tienda</a>
+        </div>
+        <div class="details">
+            <% if (data) { %>
+                
+            <div class="details-image">
+                <img src=<%- data.url_image %> alt=<%- data.name %>> 
+            </div>
+            <div class="details-info">
+                <ul>
+                    <li>
+                        <h1><%- data.name %></h1>
+                    </li>
+                    <li>
+                        <p>Categoria: <%- data.category %></p>
+                    </li>
+                    <li>Precio: <strong>$<%- data.price %></strong></li>
+                </ul>
+            </div>
+            <% } %>
+            <div class="details-action">
+                <ul>
+                    <li>
+                        Precio: $<%- data.price %>
+                    </li>
+                    <li>
+                        Status: <span>En Stock</span>
+                    </li>
+                    <li>
+                        <button value=/cart/<%- data.id %>  class="add-button">Agregar al Carro</button>
+                    </li>
+                </ul>
+        
+            </div>
+        </div>
+            </div>
+        
+</main>
+
+   <%- include ('partials/footer') %>

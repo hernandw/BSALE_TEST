@@ -39,3 +39,19 @@ exports.buscar = (req, res) => {
     }
   });
 };
+
+exports.productDetail = (req, res) => {
+  const { id } = req.params;
+  const sql = `select p.id, c.name as category, p.url_image, p.price, p.name from product p inner join category c on p.category = c.id WHERE p.id = ${id}`;
+  connection.query(sql, (error, results) => {
+    if (error) {
+      console.log({
+        message: "Error: " + error,
+      });
+    }else {
+      res.render("detailProduct", {
+        data: results[0]
+      });
+    }
+  });
+}
