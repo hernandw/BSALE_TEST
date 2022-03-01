@@ -11,7 +11,7 @@ exports.home = (req, res) => {
       });
     } else {
       res.render("products", {
-        data: results
+        data: results,
       });
     }
   });
@@ -45,31 +45,15 @@ exports.productDetail = (req, res) => {
       console.log({
         message: "Error: " + error,
       });
-    }else {
-      res.render("detailProduct", {
-        data: results[0]
-      });
-    }
-  });
-}
-
-
-exports.api = (req, res) => {
-  const sql = "SELECT * FROM product";
-  connection.query(sql, (error, results) => {
-    if (error) {
-      console.log({
-        message: "Error: " + error,
-      });
     } else {
-      res.json(
-        results
-      );
+      res.render("detailProduct", {
+        data: results[0],
+      });
     }
   });
 };
 
-exports.filtro = (req, res) =>{
+exports.filtro = (req, res) => {
   const { id } = req.params;
   const sql = `select p.id, c.name as category, p.url_image, p.price, p.name from product p inner join category c on p.category = c.id WHERE category = ${id}`;
   connection.query(sql, (error, results) => {
@@ -77,45 +61,40 @@ exports.filtro = (req, res) =>{
       console.log({
         message: "Error: " + error,
       });
-    }
-    else {
+    } else {
       res.render("products", {
-        data: results
+        data: results,
       });
     }
   });
-}
+};
 
-exports.precioAsc = (req, res) =>{
-  const { id } = req.params;
-  const sql = 'select * from product ORDER BY price ASC';
+exports.precioAsc = (req, res) => {
+    const sql = "select * from product ORDER BY price asc";
   connection.query(sql, (error, results) => {
     if (error) {
       console.log({
         message: "Error: " + error,
       });
-    }
-    else {
+    } else {
       res.render("products", {
-        data: results
+        data: results,
       });
     }
   });
-}
+};
 
-exports.precioDesc = (req, res) =>{
-  const { id } = req.params;
-  const sql = 'select * from product ORDER BY price DESC';
+exports.precioDesc = (req, res) => {
+    const sql = "select * from product ORDER BY price DESC";
   connection.query(sql, (error, results) => {
     if (error) {
       console.log({
         message: "Error: " + error,
       });
-    }
-    else {
+    } else {
       res.render("products", {
-        data: results
+        data: results,
       });
     }
   });
-}
+};
