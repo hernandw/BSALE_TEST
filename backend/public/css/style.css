@@ -30,9 +30,9 @@ font-size: 1.5rem;
 font-weight: bold;
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 /* Espacios */
 
@@ -253,4 +253,26 @@ box-shadow: var(--box-shadow);
 
 .add-button:hover {
   border: 0.1rem #404040 solid
+}
+
+/* Paginador */
+.paginador {
+  text-align: center;
+}
+
+a{
+  margin-right: 15px;
+  color: blue;
+}
+
+.selectedLink{
+  color: red;
+}
+
+.break{
+  margin: 50px 0;
+}
+
+a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
 }

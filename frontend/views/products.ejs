@@ -8,22 +8,35 @@
 </main> -->
 
 <main class="container grid ">
-    <% if (data) { %>
-        <% for( let i=0; i < data.length; i++ ) { %>
-            <article class="card" id="products">
-                <img class="img-fluid" src=<%- data[i].url_image %> >
-                <div class="card-content">
-                    <h5>
-                        <%- data[i].name %>
-                    </h5>
-                    <!-- <h3>Categoria: <%- data[i].category %></h3> -->
-                    <h5>$ <%- data[i].price %></h5>
-                    <a class="btn btn-dark" href=product/<%- data[i].id %> >Comprar</a>
-                </div>
-            </article>
-            <% } %>
-                <% } %>
+   <% data.forEach(entry => { %>
+    <article class="card" id="products">
+        <img class="img-fluid" src=<%- entry.url_image %> >
+        <div class="card-content">
+            <h5>
+                <%- entry.name %>
+            </h5>
+            <!-- <h3>Categoria: <%- entry.category %></h3> -->
+            <h5>$ <%- entry.price %></h5>
+            <a class="btn btn-dark" href=product/<%- entry.id %> >Comprar</a>
+        </div>
+    </article>
+
+  <% });  %>
+  <div class="break"></div>
+  
+</main>
+  <div class="paginador">
+     <!--Mostrar los enlaces del paginador-->
+     <% if((page > 1) && (page <= numberOfPages)) { %> <a href="/?page=<%=page-1%>">Previous</a> <% } %>
+     <% for(let i = 1; i <= endingLink; i++) { %>
+         <% if(i === page) { %>
+         <a class="selectedLink" href="/?page=<%=i%>"><%=i%></a>
+         <% continue; %>
+     <% } %>
+         <a href="/?page=<%=i%>"><%=i%></a>
+         <% } %>
+         <% if(page > 0 && page < numberOfPages)   { %> <a href="/?page=<%=page+1%>">Next</a> <% } %>
+  </div>
  
- </main>
 
    <%- include ('partials/footer') %>
