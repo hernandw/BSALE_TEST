@@ -51,6 +51,8 @@ Los modelos no se realizaron porque se conectó  a la BBDD de datos proporcionad
 
 Buscador: Debe escribir una palabra para obtener una búsqueda
 
+Paginador: se visualizan los resultados (12 por página).
+
 
 
 Se hizo deploy en heroku https://bsaleshopping.herokuapp.com/
