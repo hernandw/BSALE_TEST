@@ -68,12 +68,13 @@ exports.buscar = (req, res) => {
       if (endingLink < page + 4) {
         iterator -= page + 4 - numberOfPages;
       }
+      
       res.render("products", {
         data: results,
         page,
         iterator,
         endingLink,
-        numberOfPages,
+        numberOfPages
       });
     });
   });
