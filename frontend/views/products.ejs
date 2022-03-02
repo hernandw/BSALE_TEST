@@ -27,8 +27,7 @@
 </main>
   <div class="paginador">
      <!--Mostrar los enlaces del paginador-->
-     
-     <% if((page > 1) && (page <= numberOfPages)) { %> <a href="/?page=<%=page-1%>">Previous</a> <% } %>
+          <% if ((page > 1) && (page <= numberOfPages)) { %> <a href="/?page=<%=page-1%>">Previous</a> <% } %>
      
      <% for(let i = 1; i <= endingLink; i++) { %>
         

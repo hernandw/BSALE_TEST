@@ -46,6 +46,9 @@ exports.buscar = (req, res) => {
   const name = req.query.name;
   let sql = `SELECT * FROM product WHERE name LIKE '%${name}%'`;
   connection.query(sql, (error, results) => {
+    if(results.length === 0) {
+      return res.render('error')
+    }
     const numOfResults = results.length;
     const numberOfPages = Math.ceil(numOfResults / resultsPerPage);
     let page = req.query.page ? Number(req.query.page) : 1;
@@ -65,17 +68,18 @@ exports.buscar = (req, res) => {
         iterator + 9 <= numberOfPages
           ? iterator + 9
           : page + (numberOfPages - page);
+      
       if (endingLink < page + 4) {
         iterator -= page + 4 - numberOfPages;
       }
-      
-      res.render("products", {
+            res.render("products", {
         data: results,
         page,
         iterator,
         endingLink,
         numberOfPages
       });
+      
     });
   });
 };
