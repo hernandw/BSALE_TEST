@@ -8,6 +8,7 @@ const customerRoutes = require("./routes/product");
 
 // Configuraciones
 const PORT = process.env.PORT || 5000;
+
 app.set("view engine", "ejs"); // motor de plantilla EJS
 app.set("views", path.join(__dirname, "../frontend/views"));
 
@@ -28,11 +29,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.listen(PORT, async(req, res) => {
   console.log(`Servidor activo on port: ${PORT}`);
 
-  // Check connect
+/*   // Check connect
 connection.connect(error => {
   if (error) throw error;
   console.log('Database server running!');
-});
+}); */
  
 });
 

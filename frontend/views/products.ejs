@@ -25,21 +25,7 @@
   <div class="break"></div>
   
 </main>
-  <div class="paginador">
-     <!--Mostrar los enlaces del paginador-->
-          <% if ((page > 1) && (page <= numberOfPages)) { %> <a href="/?page=<%=page-1%>">Previous</a> <% } %>
-     
-     <% for(let i = 1; i <= endingLink; i++) { %>
-        
-        <% if(i === page) { %>
-         <a class="selectedLink" href="/?page=<%=i%>"><%=i%></a>
-         <% continue; %>
-     <% } %>
-         <a href="/?page=<%=i%>"><%=i%></a>
-         <% } %>
-         <% if(page > 0 && page < numberOfPages)   { %> <a href="/?page=<%=page+1%>">Next</a> <% } %>
-         
-  </div>
+  
  
 
    <%- include ('partials/footer') %>
